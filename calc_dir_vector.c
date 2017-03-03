@@ -5,17 +5,17 @@
 ** Login   <antoine.hartwig@epitech.net>
 ** 
 ** Started on  Fri Feb 24 16:46:43 2017 Antoine Hartwig
-** Last update Fri Feb 24 19:59:12 2017 Antoine Hartwig
+** Last update Thu Mar  2 19:05:45 2017 HartWoom
 */
 
 #include "include/my.h"
 
-sfVector3f	calc_dir_vector(sfVector2i screen_size, sfVector2i screen_pos)
+sfVector3f	calc_dir_vector(float dist, sfVector2i screen_size, sfVector2i screen_pos)
 {
   sfVector3f	dir_vector;
 
-  dir_vector.x = (screen_size.x / 2) - screen_pos.x;
-  dir_vector.y = (screen_size.y / 2) - screen_pos.y;
-  dir_vector.z = 500;
+  dir_vector.y = (screen_size.x / 2) - screen_pos.x;
+  dir_vector.z = (screen_size.y / 2) - screen_pos.y;
+  dir_vector.x = dist;
   return (dir_vector);
 }

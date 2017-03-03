@@ -1,3 +1,4 @@
+
 /*
 ** main.c for raytracer in /home/antoine.hartwig/Epitech/Infographie/bsraytracer1
 ** 
@@ -5,25 +6,38 @@
 ** Login   <antoine.hartwig@epitech.net>
 ** 
 ** Started on  Thu Feb 23 16:35:40 2017 Antoine Hartwig
-** Last update Thu Mar  2 18:42:24 2017 HartWoom
+** Last update Fri Mar  3 19:55:14 2017 HartWoom
 */
 
 #include "include/my.h"
 
-void	raytrace_scene(t_my_framebuffer *framebuffer)
+void		raytrace_scene(t_my_framebuffer *framebuffer)
 {
-  sfVector2i	pos = {420, 340};
+  sfVector2i	pos = {0, 0};
   sfVector2i	size = {840, 680};
-  sfVector3f	eyes = {-200, 0, 0};
+  sfVector3f	eyes = {-200.0, 0.0, 20.0};
   sfVector3f	vect;
+  float		s;
+  float		p;
 
-  vect = calc_dir_vector(size, pos);
-  printf("vect.x: %f vect.y: %f vect.z: %f\n", vect.x, vect.y, vect.z);
-  printf("f: %f\n", intersect_sphere(eyes, vect, 50));
-  while (pos.x != size.x - 1 || pos.y != size.y - 1)
+  while (pos.x != size.x || pos.y != size.y)
     {
-      if (intersect_sphere(eyes, calc_dir_vector(size, pos), 20) != -1)
-  	my_put_pixel(framebuffer, pos.x, pos.y, sfRed);
+      vect = calc_dir_vector(500, size, pos);
+      s = intersect_sphere(eyes, vect, 30.0);
+      p = intersect_plane(eyes, vect);
+      if (s < 0 && p < 0)
+	my_put_pixel(framebuffer, pos.x, pos.y, sfBlack);
+      if (s >= 0 && p <= 0)
+	my_put_pixel(framebuffer, pos.x, pos.y, sfRed);
+      if (s > 0 && p > 0)
+	{
+	  if (s >= p)
+	    my_put_pixel(framebuffer, pos.x, pos.y, sfBlue);
+	  else if (s < p)
+	    my_put_pixel(framebuffer, pos.x, pos.y, sfRed);
+	}
+      if (s < 0 && p > 0)
+	my_put_pixel(framebuffer, pos.x, pos.y, sfBlue);
       if (pos.x == size.x)
   	{
   	  pos.y++;
@@ -33,29 +47,6 @@ void	raytrace_scene(t_my_framebuffer *framebuffer)
   	pos.x++;
     }
 }
-
-/*
-** This main function is provided for the bootstrap of the Raytracer1.
-** YOU MUST NOT SUBMIT IT !
-**
-** Some functions are required for this code to work :
-** - All functions of the c_graph_prog library
-** - my_framebuffer_create
-** - raytrace_scene
-** - my_framebuffer_destroy
-**
-** //// my_framebuffer_create(int width, int height)
-** Creates a framebuffer from the width and the height of the frame.
-** 
-** //// raytrace_scene(t_my_framebuffer *framebuffer)
-** Launches rays and fills the framebuffer with the proper color for 
-** every pixels.
-** The frame is static so the function only needs to be called once at
-** the beginning of the program (as it currently is).
-**
-** //// my_framebuffer_destroy(t_my_framebuffer *framebuffer)
-** Frees the space allocated to the framebuffer.
-*/
 
 int		process_game_loop(sfRenderWindow *window, sfSprite *sprite)
 {

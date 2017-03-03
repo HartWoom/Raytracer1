@@ -5,7 +5,7 @@
 ## Login   <antoine.hartwig@epitech.net>
 ## 
 ## Started on  Thu Feb 23 16:06:18 2017 Antoine Hartwig
-## Last update Fri Feb 24 19:58:37 2017 Antoine Hartwig
+## Last update Fri Mar  3 19:03:30 2017 HartWoom
 ##
 
 SRC	=	main.c			\
@@ -13,7 +13,8 @@ SRC	=	main.c			\
 		my_framebuffer_create.c	\
 		my_framebuffer_destroy.c\
 		calc_dir_vector.c	\
-		intersect_sphere.c
+		intersect_sphere.c	\
+		intersect_plane.c
 
 OBJ	=	$(SRC:.c=.o)
 
