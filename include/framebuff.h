@@ -5,7 +5,7 @@
 ** Login   <antoine.hartwig@epitech.net>
 ** 
 ** Started on  Wed Nov  9 10:20:53 2016 Antoine Hartwig
-** Last update Thu Feb 23 16:32:16 2017 Antoine Hartwig
+** Last update Mon Mar  6 12:56:41 2017 HartWoom
 */
 
 #ifndef S_LIST_
@@ -20,4 +20,4 @@ typedef struct	s_my_framebuffer
 
 t_my_framebuffer* my_framebuffer_create(int width, int height);
 
-#endif /* !S_LIST_ */
+#endif

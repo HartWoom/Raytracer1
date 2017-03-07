@@ -6,10 +6,28 @@
 ** Login   <antoine.hartwig@epitech.net>
 ** 
 ** Started on  Thu Feb 23 16:35:40 2017 Antoine Hartwig
-** Last update Fri Mar  3 19:55:14 2017 HartWoom
+** Last update Tue Mar  7 16:47:51 2017 HartWoom
 */
 
 #include "include/my.h"
+
+void	what_to_draw(t_my_framebuffer *framebuffer, sfVector2i pos,
+		     float s, float p)
+{
+  if (s < 0 && p < 0)
+    my_put_pixel(framebuffer, pos.x, pos.y, sfBlack);
+  if (s >= 0 && p <= 0)
+    my_put_pixel(framebuffer, pos.x, pos.y, sfRed);
+  if (s > 0 && p > 0)
+    {
+      if (s >= p)
+	my_put_pixel(framebuffer, pos.x, pos.y, sfBlue);
+      else if (s < p)
+	my_put_pixel(framebuffer, pos.x, pos.y, sfRed);
+    }
+  if (s < 0 && p > 0)
+    my_put_pixel(framebuffer, pos.x, pos.y, sfBlue);
+}
 
 void		raytrace_scene(t_my_framebuffer *framebuffer)
 {
@@ -25,19 +43,7 @@ void		raytrace_scene(t_my_framebuffer *framebuffer)
       vect = calc_dir_vector(500, size, pos);
       s = intersect_sphere(eyes, vect, 30.0);
       p = intersect_plane(eyes, vect);
-      if (s < 0 && p < 0)
-	my_put_pixel(framebuffer, pos.x, pos.y, sfBlack);
-      if (s >= 0 && p <= 0)
-	my_put_pixel(framebuffer, pos.x, pos.y, sfRed);
-      if (s > 0 && p > 0)
-	{
-	  if (s >= p)
-	    my_put_pixel(framebuffer, pos.x, pos.y, sfBlue);
-	  else if (s < p)
-	    my_put_pixel(framebuffer, pos.x, pos.y, sfRed);
-	}
-      if (s < 0 && p > 0)
-	my_put_pixel(framebuffer, pos.x, pos.y, sfBlue);
+      what_to_draw(framebuffer, pos, s, p);
       if (pos.x == size.x)
   	{
   	  pos.y++;
@@ -75,7 +81,6 @@ int	main()
   sfTexture		*texture;
   sfSprite		*sprite;
   t_my_framebuffer	*framebuffer;
-  sfEvent       event;
 
   window = sfRenderWindow_create(mode, "Bootstrap Raytracer 1",
 				 sfResize | sfClose, NULL);

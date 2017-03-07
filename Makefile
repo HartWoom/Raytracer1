@@ -5,16 +5,16 @@
 ## Login   <antoine.hartwig@epitech.net>
 ## 
 ## Started on  Thu Feb 23 16:06:18 2017 Antoine Hartwig
-## Last update Fri Mar  3 19:03:30 2017 HartWoom
+## Last update Tue Mar  7 17:41:52 2017 HartWoom
 ##
 
 SRC	=	main.c			\
 		my_put_pixel.c		\
 		my_framebuffer_create.c	\
 		my_framebuffer_destroy.c\
-		calc_dir_vector.c	\
-		intersect_sphere.c	\
-		intersect_plane.c
+		src/calc_dir_vector.c	\
+		src/plane.c		\
+		src/sphere.c
 
 OBJ	=	$(SRC:.c=.o)
 
