@@ -5,21 +5,34 @@
 ** Login   <antoine.hartwig@epitech.eu>
 ** 
 ** Started on  Tue Mar  7 17:24:47 2017 HartWoom
-** Last update Tue Mar  7 17:40:33 2017 HartWoom
+** Last update Tue Mar  7 19:17:31 2017 HartWoom
 */
 
 #include "../include/my.h"
 
 float	intersect_cylinder(sfVector3f eye, sfVector3f dir_v, float radius)
 {
-  float	k;
+  float a;
+  float b;
+  float c;
+  float delta;
 
-  return (k);
+  a = powf(dir_v.x, 2) + powf(dir_v.y, 2);
+  b = 2 * ((eye.x * dir_v.x) + (eye.y * dir_v.y));
+  c = powf(eye.x, 2) + powf(eye.y, 2) - powf(radius, 2);
+  delta = powf(b, 2) - (4 * a * c);
+  if (delta > 0)
+    return (case_1(a, b, delta));
+  else if (delta == 0)
+    return (case_2(a, b));
+  else if (delta < 0)
+    return (-1);
+  return (0);
 }
 
-sfVector3f	get_normal_cylinder(sfVector3f intersection_point)
-{
-  sfVector3f	to_return = {0, 0, 0};
+/* sfVector3f	get_normal_cylinder(sfVector3f intersection_point) */
+/* { */
+/*   sfVector3f	to_return = {0, 0, 0}; */
 
-  return (to_return);
-}
+/*   return (to_return); */
+/* } */
