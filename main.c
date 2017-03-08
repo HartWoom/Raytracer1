@@ -6,7 +6,7 @@
 ** Login   <antoine.hartwig@epitech.net>
 ** 
 ** Started on  Thu Feb 23 16:35:40 2017 Antoine Hartwig
-** Last update Tue Mar  7 19:18:01 2017 HartWoom
+** Last update Wed Mar  8 13:31:43 2017 HartWoom
 */
 
 #include "include/my.h"
@@ -41,7 +41,7 @@ void		raytrace_scene(t_my_framebuffer *framebuffer)
   while (pos.x != size.x || pos.y != size.y)
     {
       vect = calc_dir_vector(500, size, pos);
-      s = intersect_cylinder(eyes, vect, 30.0);
+      s = intersect_cone(eyes, vect, 30.0);
       p = intersect_plane(eyes, vect);
       what_to_draw(framebuffer, pos, s, p);
       if (pos.x == size.x)
