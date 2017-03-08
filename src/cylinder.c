@@ -5,7 +5,7 @@
 ** Login   <antoine.hartwig@epitech.eu>
 ** 
 ** Started on  Tue Mar  7 17:24:47 2017 HartWoom
-** Last update Tue Mar  7 19:17:31 2017 HartWoom
+** Last update Wed Mar  8 20:22:28 2017 HartWoom
 */
 
 #include "../include/my.h"
@@ -30,9 +30,12 @@ float	intersect_cylinder(sfVector3f eye, sfVector3f dir_v, float radius)
   return (0);
 }
 
-/* sfVector3f	get_normal_cylinder(sfVector3f intersection_point) */
-/* { */
-/*   sfVector3f	to_return = {0, 0, 0}; */
+sfVector3f	get_normal_cylinder(sfVector3f intersection_point)
+{
+  sfVector3f	to_return;
 
-/*   return (to_return); */
-/* } */
+  to_return.x = intersection_point.x;
+  to_return.y = intersection_point.y;
+  to_return.z = 0;
+  return (to_return);
+}
