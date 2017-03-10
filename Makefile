@@ -5,7 +5,7 @@
 ## Login   <antoine.hartwig@epitech.net>
 ## 
 ## Started on  Thu Feb 23 16:06:18 2017 Antoine Hartwig
-## Last update Tue Mar  7 19:57:48 2017 HartWoom
+## Last update Fri Mar 10 10:19:58 2017 HartWoom
 ##
 
 SRC	=	main.c			\
@@ -14,6 +14,7 @@ SRC	=	main.c			\
 		my_framebuffer_destroy.c\
 		src/utils.c		\
 		src/calc_dir_vector.c	\
+		src/translate.c		\
 		src/plane.c		\
 		src/sphere.c		\
 		src/cylinder.c		\
