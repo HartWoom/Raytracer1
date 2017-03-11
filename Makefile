@@ -5,7 +5,7 @@
 ## Login   <antoine.hartwig@epitech.net>
 ## 
 ## Started on  Thu Feb 23 16:06:18 2017 Antoine Hartwig
-## Last update Fri Mar 10 10:19:58 2017 HartWoom
+## Last update Sat Mar 11 11:24:55 2017 HartWoom
 ##
 
 SRC	=	main.c			\
@@ -18,7 +18,8 @@ SRC	=	main.c			\
 		src/plane.c		\
 		src/sphere.c		\
 		src/cylinder.c		\
-		src/cone.c
+		src/cone.c		\
+		src/light.c
 
 OBJ	=	$(SRC:.c=.o)
 

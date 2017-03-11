@@ -5,7 +5,7 @@
 ** Login   <antoine.hartwig@epitech.net>
 ** 
 ** Started on  Wed Feb  8 08:15:05 2017 Antoine Hartwig
-** Last update Wed Mar  8 20:22:50 2017 HartWoom
+** Last update Sat Mar 11 14:07:03 2017 HartWoom
 */
 
 #ifndef MY_H_
@@ -32,9 +32,12 @@ float	intersect_plane(sfVector3f, sfVector3f);
 float   intersect_sphere(sfVector3f, sfVector3f, float);
 float	intersect_cylinder(sfVector3f, sfVector3f, float);
 float	intersect_cone(sfVector3f, sfVector3f, float);
+sfVector3f	get_normal_plane(int);
 sfVector3f	get_normal_sphere(sfVector3f);
 sfVector3f	get_normal_cylinder(sfVector3f);
+sfVector3f	get_normal_cone(sfVector3f, float);
 float	case_1(float, float, float);
 float	case_2(float, float);
+float	get_light_coef(sfVector3f, sfVector3f);
 
 #endif /* !MY_H_ */
