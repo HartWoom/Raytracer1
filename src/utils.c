@@ -5,7 +5,7 @@
 ** Login   <antoine.hartwig@epitech.eu>
 ** 
 ** Started on  Tue Mar  7 19:06:47 2017 HartWoom
-** Last update Sat Mar 11 15:30:31 2017 HartWoom
+** Last update Mon Mar 13 14:05:55 2017 HartWoom
 */
 
 #include "../include/my.h"
@@ -21,9 +21,9 @@ float   case_1(float a, float b, float delta)
   k2 = (-b - sqrt(delta)) / (2 * a);
   if (k1 <= k2 && k1 > 0)
     return (k1);
-  else
+  else if (k2 < k1 && k2 > 0)
     return (k2);
-  return (0);
+  return (-1);
 }
 
 float   case_2(float a, float b)
@@ -33,5 +33,7 @@ float   case_2(float a, float b)
   if (a == 0)
     return (0);
   k1 = -b / (2 * a);
-  return (k1);
+  if (k1 > 0)
+    return (k1);
+  return (-1);
 }
