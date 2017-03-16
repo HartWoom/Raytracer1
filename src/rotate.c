@@ -5,7 +5,7 @@
 ** Login   <antoine.hartwig@epitech.eu>
 ** 
 ** Started on  Tue Mar  7 16:59:50 2017 HartWoom
-** Last update Thu Mar 16 14:33:11 2017 HartWoom
+** Last update Thu Mar 16 15:27:46 2017 HartWoom
 */
 
 #include "my.h"
@@ -14,11 +14,10 @@ sfVector3f	rotate_arround_x(sfVector3f vector, float angle)
 {
   sfVector3f	to_return;
 
+  angle = M_PI * angle / 180;
   to_return = vector;
-  to_return.y = vector.y * (M_PI * cosf(angle) / 180)
-    + vector.z * (M_PI * -sin(angle) / 180);
-  to_return.z = vector.y * (M_PI * sinf(angle) / 180)
-    + vector.z * (M_PI * cos(angle) / 180);
+  to_return.y = vector.y * cosf(angle) + vector.z * -sin(angle);
+  to_return.z = vector.y * sinf(angle) + vector.z * cos(angle);
   return (to_return);
 }
 
@@ -26,11 +25,10 @@ sfVector3f	rotate_arround_y(sfVector3f vector, float angle)
 {
   sfVector3f	to_return;
 
+  angle = M_PI * angle / 180;
   to_return = vector;
-  to_return.x = vector.x * (M_PI * cos(angle) / 180)
-    + vector.z * (M_PI * sin(angle) / 180);
-  to_return.z = vector.x * (M_PI * -sin(angle) / 180)
-    + vector.z * (M_PI * cos(angle) / 180);
+  to_return.x = vector.x * cos(angle) + vector.z * sin(angle);
+  to_return.z = vector.x * -sin(angle) + vector.z * cos(angle);
   return (to_return);
 }
 
@@ -38,11 +36,10 @@ sfVector3f	rotate_arround_z(sfVector3f vector, float angle)
 {
   sfVector3f	to_return;
 
+  angle = M_PI * angle / 180;
   to_return = vector;
-  to_return.x = vector.x * (M_PI * cos(angle) / 180)
-    + vector.y * (M_PI * -sin(angle) / 180);
-  to_return.y = vector.x * (M_PI * sin(angle) / 180)
-    + vector.y * (M_PI * cos(angle) / 180);
+  to_return.x = vector.x * cos(angle) + vector.y * -sin(angle);
+  to_return.y = vector.x * sin(angle) + vector.y * cos(angle);
   return (to_return);
 }
 
