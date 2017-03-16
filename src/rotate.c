@@ -5,7 +5,7 @@
 ** Login   <antoine.hartwig@epitech.eu>
 ** 
 ** Started on  Tue Mar  7 16:59:50 2017 HartWoom
-** Last update Thu Mar 16 10:32:03 2017 HartWoom
+** Last update Thu Mar 16 11:04:26 2017 HartWoom
 */
 
 #include "../include/my.h"
@@ -33,20 +33,16 @@ sfVector3f	rotate_arround_z(sfVector3f vector, float angle)
 
 sfVector3f	rotate_xyz(sfVector3f to_rotate, sfVector3f angles)
 {
-  sfVector3f	to_return;
-
-  to_return = rotate_arround_x(to_rotate, angles.x);
-  to_return = rotate_arround_y(to_return, angles.y);
-  to_return = rotate_arround_z(to_return, angles.z);
-  return (to_return);
+  to_rotate = rotate_arround_x(to_rotate, angles.x);
+  to_rotate = rotate_arround_y(to_rotate, angles.y);
+  to_rotate = rotate_arround_z(to_rotate, angles.z);
+  return (to_rotate);
 }
 
 sfVector3f	rotate_zyx(sfVector3f to_rotate, sfVector3f angles)
 {
-  sfVector3f	to_return;
-
-  to_return = rotate_arround_z(to_rotate, angles.z);
-  to_return = rotate_arround_y(to_return, angles.y);
-  to_return = rotate_arround_x(to_return, angles.x);
-  return (to_return);
+  to_rotate = rotate_arround_z(to_rotate, angles.z);
+  to_rotate = rotate_arround_y(to_rotate, angles.y);
+  to_rotate = rotate_arround_x(to_rotate, angles.x);
+  return (to_rotate);
 }
