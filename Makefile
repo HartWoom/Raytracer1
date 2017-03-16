@@ -5,7 +5,7 @@
 ## Login   <antoine.hartwig@epitech.net>
 ## 
 ## Started on  Thu Feb 23 16:06:18 2017 Antoine Hartwig
-## Last update Sat Mar 11 11:24:55 2017 HartWoom
+## Last update Thu Mar 16 10:31:18 2017 HartWoom
 ##
 
 SRC	=	main.c			\
@@ -15,6 +15,7 @@ SRC	=	main.c			\
 		src/utils.c		\
 		src/calc_dir_vector.c	\
 		src/translate.c		\
+		src/rotate.c		\
 		src/plane.c		\
 		src/sphere.c		\
 		src/cylinder.c		\
