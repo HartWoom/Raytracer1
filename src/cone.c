@@ -5,7 +5,7 @@
 ** Login   <antoine.hartwig@epitech.eu>
 ** 
 ** Started on  Tue Mar  7 17:28:23 2017 HartWoom
-** Last update Thu Mar 16 14:34:08 2017 HartWoom
+** Last update Thu Mar 16 15:32:53 2017 HartWoom
 */
 
 #include "my.h"
@@ -37,8 +37,9 @@ sfVector3f	get_normal_cone(sfVector3f intersection_point, float semiangle)
 {
   sfVector3f	to_return;
 
+  semiangle = M_PI * semiangle / 180;
   to_return.x = intersection_point.x;
   to_return.y = intersection_point.y;
-  to_return.z = -semiangle * intersection_point.z;
+  to_return.z = -atan(semiangle) * intersection_point.z;
   return (to_return);
 }
