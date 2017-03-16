@@ -6,7 +6,7 @@
 ** Login   <antoine.hartwig@epitech.net>
 ** 
 ** Started on  Thu Feb 23 16:35:40 2017 Antoine Hartwig
-** Last update Mon Mar 13 14:12:48 2017 HartWoom
+** Last update Thu Mar 16 13:22:54 2017 HartWoom
 */
 
 #include "include/my.h"
@@ -46,22 +46,22 @@ void		raytrace_scene(t_my_framebuffer *framebuffer)
     {
       vect = calc_dir_vector(500, size, pos);
       s = intersect_sphere(eyes, vect, 25.0);
-      /* if (s != -1) */
-      /* 	{ */
-      /* 	  inter.x = eyes.x + (s * vect.x); */
-      /* 	  inter.y = eyes.y + (s * vect.y); */
-      /* 	  inter.z = eyes.z + (s * vect.z); */
-      /* 	  light_v.x = inter.x - light.x; */
-      /* 	  light_v.y = inter.y - light.y; */
-      /* 	  light_v.z = inter.z - light.z; */
-      /* 	  vect = get_normal_sphere(inter); */
-      /* 	  p = get_light_coef(light_v, vect); */
-      /* 	  /\* p = M_PI * p / 180; *\/ */
-      /* 	  to_calc.r *= p; */
-      /* 	  to_calc.g *= p; */
-      /* 	  to_calc.b *= p; */
-      /* 	  my_put_pixel(framebuffer, pos.x, pos.y, to_calc); */
-      /* 	} */
+      if (s != -1)
+      	{
+      	  inter.x = eyes.x + (s * vect.x);
+      	  inter.y = eyes.y + (s * vect.y);
+      	  inter.z = eyes.z + (s * vect.z);
+      	  light_v.x = inter.x - light.x;
+      	  light_v.y = inter.y - light.y;
+      	  light_v.z = inter.z - light.z;
+      	  vect = get_normal_sphere(inter);
+      	  p = get_light_coef(light_v, vect);
+      	  /* p = M_PI * p / 180; */
+      	  to_calc.r *= p;
+      	  to_calc.g *= p;
+      	  to_calc.b *= p;
+      	  my_put_pixel(framebuffer, pos.x, pos.y, to_calc);
+      	}
       p = intersect_plane(eyes, vect);
       what_to_draw(framebuffer, pos, s, p);
       if (pos.x == size.x)
