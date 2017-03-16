@@ -5,7 +5,7 @@
 ** Login   <antoine.hartwig@epitech.eu>
 ** 
 ** Started on  Tue Mar  7 19:06:47 2017 HartWoom
-** Last update Mon Mar 13 14:05:55 2017 HartWoom
+** Last update Thu Mar 16 09:26:46 2017 HartWoom
 */
 
 #include "../include/my.h"
@@ -22,6 +22,10 @@ float   case_1(float a, float b, float delta)
   if (k1 <= k2 && k1 > 0)
     return (k1);
   else if (k2 < k1 && k2 > 0)
+    return (k2);
+  else if (k1 >= k2 && k2 < 0 && k1 > 0)
+    return (k1);
+  else if (k2 > k1 && k2 > 0 && k1 < 0)
     return (k2);
   return (-1);
 }
