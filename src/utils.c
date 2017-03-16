@@ -5,10 +5,10 @@
 ** Login   <antoine.hartwig@epitech.eu>
 ** 
 ** Started on  Tue Mar  7 19:06:47 2017 HartWoom
-** Last update Thu Mar 16 09:26:46 2017 HartWoom
+** Last update Thu Mar 16 14:35:01 2017 HartWoom
 */
 
-#include "../include/my.h"
+#include "my.h"
 
 float   case_1(float a, float b, float delta)
 {

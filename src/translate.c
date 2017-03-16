@@ -5,10 +5,10 @@
 ** Login   <antoine.hartwig@epitech.eu>
 ** 
 ** Started on  Tue Mar  7 16:56:47 2017 HartWoom
-** Last update Fri Mar 10 10:20:12 2017 HartWoom
+** Last update Thu Mar 16 14:35:16 2017 HartWoom
 */
 
-#include "../include/my.h"
+#include "my.h"
 
 sfVector3f	translate(sfVector3f to_translate, sfVector3f translations)
 {

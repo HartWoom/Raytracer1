@@ -5,10 +5,10 @@
 ** Login   <antoine.hartwig@epitech.eu>
 ** 
 ** Started on  Tue Mar  7 17:33:58 2017 HartWoom
-** Last update Thu Mar 16 10:08:47 2017 HartWoom
+** Last update Thu Mar 16 14:34:17 2017 HartWoom
 */
 
-#include "../include/my.h"
+#include "my.h"
 
 float	get_light_coef(sfVector3f light, sfVector3f normal)
 {

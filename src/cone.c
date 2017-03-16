@@ -5,10 +5,10 @@
 ** Login   <antoine.hartwig@epitech.eu>
 ** 
 ** Started on  Tue Mar  7 17:28:23 2017 HartWoom
-** Last update Sat Mar 11 14:03:33 2017 HartWoom
+** Last update Thu Mar 16 14:34:08 2017 HartWoom
 */
 
-#include "../include/my.h"
+#include "my.h"
 
 float	intersect_cone(sfVector3f eye, sfVector3f dir_v, float semiangle)
 {

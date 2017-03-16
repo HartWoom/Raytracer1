@@ -5,10 +5,10 @@
 ** Login   <antoine.hartwig@epitech.eu>
 ** 
 ** Started on  Tue Mar  7 17:24:47 2017 HartWoom
-** Last update Wed Mar  8 20:22:28 2017 HartWoom
+** Last update Thu Mar 16 14:34:49 2017 HartWoom
 */
 
-#include "../include/my.h"
+#include "my.h"
 
 float	intersect_cylinder(sfVector3f eye, sfVector3f dir_v, float radius)
 {

@@ -5,10 +5,10 @@
 ** Login   <antoine.hartwig@epitech.eu>
 ** 
 ** Started on  Tue Mar  7 17:20:24 2017 HartWoom
-** Last update Sat Mar 11 14:05:27 2017 HartWoom
+** Last update Thu Mar 16 14:34:37 2017 HartWoom
 */
 
-#include "../include/my.h"
+#include "my.h"
 
 float   intersect_plane(sfVector3f eyes, sfVector3f dir_v)
 {

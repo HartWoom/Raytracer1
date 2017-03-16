@@ -5,10 +5,10 @@
 ** Login   <antoine.hartwig@epitech.net>
 ** 
 ** Started on  Fri Feb 24 16:46:43 2017 Antoine Hartwig
-** Last update Tue Mar  7 18:12:56 2017 HartWoom
+** Last update Thu Mar 16 14:33:47 2017 HartWoom
 */
 
-#include "../include/my.h"
+#include "my.h"
 
 sfVector3f	calc_dir_vector(float dist, sfVector2i screen_size, sfVector2i screen_pos)
 {

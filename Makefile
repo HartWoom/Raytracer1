@@ -5,7 +5,7 @@
 ## Login   <antoine.hartwig@epitech.net>
 ## 
 ## Started on  Thu Feb 23 16:06:18 2017 Antoine Hartwig
-## Last update Thu Mar 16 10:31:18 2017 HartWoom
+## Last update Thu Mar 16 14:33:14 2017 HartWoom
 ##
 
 SRC	=	main.c			\
@@ -28,7 +28,7 @@ CC	=	gcc
 
 LDLIBS	=	-lc_graph_prog -lm
 
-CFLAGS	=	-Iinclude/ -W -Wall -Wextra -pedantic
+CFLAGS	=	-Iinclude -W -Wall -Wextra -pedantic
 
 NAME	=	raytracer
 

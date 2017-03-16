@@ -5,10 +5,10 @@
 ** Login   <antoine.hartwig@epitech.eu>
 ** 
 ** Started on  Tue Mar  7 17:02:24 2017 HartWoom
-** Last update Wed Mar  8 19:38:08 2017 HartWoom
+** Last update Thu Mar 16 14:34:26 2017 HartWoom
 */
 
-#include "../include/my.h"
+#include "my.h"
 
 float   intersect_sphere(sfVector3f eye, sfVector3f dir_v, float radius)
 {
