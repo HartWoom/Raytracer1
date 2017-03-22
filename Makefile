@@ -5,21 +5,25 @@
 ## Login   <antoine.hartwig@epitech.net>
 ## 
 ## Started on  Thu Feb 23 16:06:18 2017 Antoine Hartwig
-## Last update Thu Mar 16 14:33:14 2017 HartWoom
+## Last update Wed Mar 22 16:45:11 2017 HartWoom
 ##
 
-SRC	=	main.c			\
-		my_put_pixel.c		\
-		my_framebuffer_create.c	\
-		my_framebuffer_destroy.c\
-		src/utils.c		\
-		src/calc_dir_vector.c	\
-		src/translate.c		\
-		src/rotate.c		\
-		src/plane.c		\
-		src/sphere.c		\
-		src/cylinder.c		\
-		src/cone.c		\
+SRC	=	main.c					\
+		set_struct.c				\
+		my_put_pixel.c				\
+		my_framebuffer_create.c			\
+		my_framebuffer_destroy.c		\
+		intersect.c				\
+		light_application/calc_light_v.c	\
+		light_application/apply_light.c		\
+		src/utils.c				\
+		src/calc_dir_vector.c			\
+		src/translate.c				\
+		src/rotate.c				\
+		src/plane.c				\
+		src/sphere.c				\
+		src/cylinder.c				\
+		src/cone.c				\
 		src/light.c
 
 OBJ	=	$(SRC:.c=.o)

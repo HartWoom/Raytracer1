@@ -1,11 +1,11 @@
 /*
-** framebuff.h for graph prog in /home/antoine.hartwig/Wireframe
+** framebuff.h for raytracer in /home/hartwoom/Epitech/Infographie/raytracer1
 ** 
-** Made by Antoine Hartwig
-** Login   <antoine.hartwig@epitech.net>
+** Made by HartWoom
+** Login   <antoine.hartwig@epitech.eu>
 ** 
-** Started on  Wed Nov  9 10:20:53 2016 Antoine Hartwig
-** Last update Mon Mar  6 12:56:41 2017 HartWoom
+** Started on  Wed Mar 22 16:42:07 2017 HartWoom
+** Last update Wed Mar 22 16:42:08 2017 HartWoom
 */
 
 #ifndef S_LIST_

@@ -5,7 +5,7 @@
 ** Login   <antoine.hartwig@epitech.net>
 ** 
 ** Started on  Wed Feb  8 08:15:05 2017 Antoine Hartwig
-** Last update Sat Mar 11 14:07:03 2017 HartWoom
+** Last update Wed Mar 22 15:17:38 2017 HartWoom
 */
 
 #ifndef MY_H_
@@ -25,6 +25,17 @@
 #define WIDTH 840
 #define HEIGHT 680
 
+typedef struct	s_ray
+{
+  sfVector3f	eyes;
+  sfVector3f	light;
+  sfVector2i	size;
+  sfColor	col_sph;
+  sfColor	col_pla;
+}	t_ray;
+
+void	set_struct(t_ray *);
+sfColor	apply_light(t_ray *, sfVector3f, float, int);
 void	my_framebuffer_destroy(t_my_framebuffer *);
 void	my_put_pixel(t_my_framebuffer *, int, int, sfColor);
 sfVector3f	calc_dir_vector(float, sfVector2i, sfVector2i);
@@ -39,5 +50,7 @@ sfVector3f	get_normal_cone(sfVector3f, float);
 float	case_1(float, float, float);
 float	case_2(float, float);
 float	get_light_coef(sfVector3f, sfVector3f);
+sfVector3f	intersect_point(sfVector3f, sfVector3f, float);
+sfVector3f	calc_light_v(sfVector3f, sfVector3f);
 
 #endif /* !MY_H_ */
